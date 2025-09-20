@@ -223,12 +223,12 @@ const ResetPassword: React.FC = () => {
       <AuthLayout leftContent={<ResetPasswordLeftContent />}>
         <div className="w-full flex flex-col justify-center bg-gradient-to-b from-navy-900 to-navy-800 min-h-screen">
           <div className="md:w-[80%] w-[90%] mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl w-full md:p-10 p-6 my-8">
+            <div className="bg-[#1E1F2E] rounded-2xl shadow-xl w-full md:p-10 p-6 my-8 border border-[#2A2D47]">
               <div className="mb-8">
-                <h2 className="md:text-4xl text-3xl font-bold text-navy-900 mb-2">
+                <h2 className="md:text-4xl text-3xl font-bold text-white mb-2">
                   Reset your password
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   Enter your new password below
                 </p>
               </div>
@@ -237,13 +237,13 @@ const ResetPassword: React.FC = () => {
                 <div>
                   <label
                     htmlFor="password"
-                    className="block text-sm font-medium text-gray-500 mb-1"
+                    className="block text-sm font-medium text-gray-300 mb-1"
                   >
                     New Password
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Lock className="h-5 w-5 text-gray-400" />
+                      <Lock className="h-5 w-5 text-gray-500" />
                     </div>
                     <input
                       id="password"
@@ -252,7 +252,7 @@ const ResetPassword: React.FC = () => {
                       required
                       value={formData.password}
                       onChange={handleChange}
-                      className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-yellow-400 focus:border-yellow-200 transition-colors"
+                      className="block w-full pl-10 pr-12 py-3 bg-[#2A2D47] border border-[#3A3D57] text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-yellow-400 focus:border-yellow-400 transition-colors placeholder-gray-500"
                       placeholder="Enter your new password"
                     />
                     <button
@@ -261,9 +261,9 @@ const ResetPassword: React.FC = () => {
                       onClick={() => setShowPassword(!showPassword)}
                     >
                       {showPassword ? (
-                        <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+                        <EyeOff className="h-5 w-5 text-gray-500 hover:text-gray-300" />
                       ) : (
-                        <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+                        <Eye className="h-5 w-5 text-gray-500 hover:text-gray-300" />
                       )}
                     </button>
                   </div>
@@ -272,13 +272,13 @@ const ResetPassword: React.FC = () => {
                 <div>
                   <label
                     htmlFor="confirmPassword"
-                    className="block text-sm font-medium text-gray-500 mb-1"
+                    className="block text-sm font-medium text-gray-300 mb-1"
                   >
                     Confirm New Password
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Lock className="h-5 w-5 text-gray-400" />
+                      <Lock className="h-5 w-5 text-gray-500" />
                     </div>
                     <input
                       id="confirmPassword"
@@ -287,7 +287,7 @@ const ResetPassword: React.FC = () => {
                       required
                       value={formData.confirmPassword}
                       onChange={handleChange}
-                      className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-yellow-400 focus:border-yellow-200 transition-colors"
+                      className="block w-full pl-10 pr-12 py-3 bg-[#2A2D47] border border-[#3A3D57] text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-yellow-400 focus:border-yellow-400 transition-colors placeholder-gray-500"
                       placeholder="Confirm your new password"
                     />
                     <button
@@ -296,17 +296,17 @@ const ResetPassword: React.FC = () => {
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                     >
                       {showConfirmPassword ? (
-                        <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+                        <EyeOff className="h-5 w-5 text-gray-500 hover:text-gray-300" />
                       ) : (
-                        <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+                        <Eye className="h-5 w-5 text-gray-500 hover:text-gray-300" />
                       )}
                     </button>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="text-sm font-medium text-blue-900 mb-2">Password Requirements:</h4>
-                  <ul className="text-sm text-blue-800 space-y-1">
+                <div className="bg-[#2A2D47] p-4 rounded-lg border border-[#3A3D57]">
+                  <h4 className="text-sm font-medium text-white mb-2">Password Requirements:</h4>
+                  <ul className="text-sm text-gray-300 space-y-1">
                     <li>• At least 6 characters long</li>
                     <li>• Contains at least one uppercase letter</li>
                     <li>• Contains at least one lowercase letter</li>
@@ -317,17 +317,17 @@ const ResetPassword: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-navy-600 to-navy-700 hover:from-navy-700 hover:to-navy-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-navy-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-navy-900 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? 'Resetting password...' : 'Reset password'}
                 </button>
               </form>
 
-              <p className="mt-8 text-center text-sm text-gray-600">
+              <p className="mt-8 text-center text-sm text-gray-400">
                 Remember your password?{' '}
                 <Link
                   to="/login"
-                  className="font-medium text-navy-600 hover:text-navy-500"
+                  className="font-medium text-yellow-400 hover:text-yellow-300"
                 >
                   Sign in
                 </Link>
